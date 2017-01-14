@@ -1,0 +1,15 @@
+{
+  "name": "eslint-config-mdrobny",
+  "version": "1.0.0",
+  "description": "mdrobny eslint config",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "peerDependencies": {
+    "eslint": "^3.x.x"
+  },
+  "dependencies": {
+    "eslint-plugin-import": "^2.2.0"
+  }
+}
