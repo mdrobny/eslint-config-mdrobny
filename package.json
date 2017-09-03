@@ -1,15 +1,33 @@
 {
   "name": "eslint-config-mdrobny",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "mdrobny eslint config",
   "main": "index.js",
+  "scripts": {
+    "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
+    "lint": "eslint --ignore-path .gitignore .",
+    "test": "npm run lint && npm run eslint-check"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.schibsted.io:spt-nextgen-sportsnext/eslint-config-sportsnext.git"
+  },
+  "engines": {
+    "node": ">=8"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "peerDependencies": {
-    "eslint": "^3.x.x"
+    "eslint": "^4.x.x"
   },
   "dependencies": {
-    "eslint-plugin-import": "^2.2.0"
+    "eslint-config-prettier": "^2.4.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-prettier": "^2.2.0",
+    "prettier": "^1.6.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.6.0"
   }
 }

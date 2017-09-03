@@ -1,14 +1,9 @@
 module.exports = {
-    plugins: [
-        'react',
-    ],
+    plugins: ['react'],
     parserOptions: {
         ecmaFeatures: {
-            jsx: true,
-        },
-    },
-    ecmaFeatures: {
-        jsx: true,
+            jsx: true
+        }
     },
 
     // View link below for react rules documentation
@@ -41,10 +36,13 @@ module.exports = {
 
         // Enforce event handler naming conventions in JSX
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-handler-names.md
-        'react/jsx-handler-names': ['error', {
-            eventHandlerPrefix: 'on',
-            eventHandlerPropPrefix: 'on',
-        }],
+        'react/jsx-handler-names': [
+            'error',
+            {
+                eventHandlerPrefix: 'on',
+                eventHandlerPropPrefix: 'on'
+            }
+        ],
 
         // Validate props indentation in JSX
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-indent-props.md
@@ -60,11 +58,14 @@ module.exports = {
 
         // Prevent usage of .bind() in JSX props
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md
-        'react/jsx-no-bind': ['error', {
-            ignoreRefs: true,
-            allowArrowFunctions: false,
-            allowBind: false,
-        }],
+        'react/jsx-no-bind': [
+            'error',
+            {
+                ignoreRefs: true,
+                allowArrowFunctions: false,
+                allowBind: false
+            }
+        ],
 
         // Prevent duplicate props in JSX
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-duplicate-props.md
@@ -80,30 +81,39 @@ module.exports = {
 
         // Enforce PascalCase for user-defined JSX components
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-pascal-case.md
-        'react/jsx-pascal-case': ['error', {
-            allowAllCaps: true,
-            ignore: [],
-        }],
+        'react/jsx-pascal-case': [
+            'error',
+            {
+                allowAllCaps: true,
+                ignore: []
+            }
+        ],
 
         // Enforce propTypes declarations alphabetical sorting
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/sort-prop-types.md
-        'react/sort-prop-types': ['off', {
-            ignoreCase: true,
-            callbacksLast: false,
-            requiredFirst: false,
-        }],
+        'react/sort-prop-types': [
+            'off',
+            {
+                ignoreCase: true,
+                callbacksLast: false,
+                requiredFirst: false
+            }
+        ],
 
         // Deprecated in favor of react/jsx-sort-props
         'react/jsx-sort-prop-types': 'off',
 
         // Enforce props alphabetical sorting
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-sort-props.md
-        'react/jsx-sort-props': ['off', {
-            ignoreCase: true,
-            callbacksLast: false,
-            shorthandFirst: false,
-            shorthandLast: false,
-        }],
+        'react/jsx-sort-props': [
+            'off',
+            {
+                ignoreCase: true,
+                callbacksLast: false,
+                shorthandFirst: false,
+                shorthandLast: false
+            }
+        ],
 
         // Prevent React to be incorrectly marked as unused
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-uses-react.md
@@ -159,7 +169,7 @@ module.exports = {
 
         // Require stateless functions when not using lifecycle methods, setState or ref
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-stateless-function.md
-        'react/prefer-stateless-function': ['error', { "ignorePureComponents": true }],
+        'react/prefer-stateless-function': ['error', { ignorePureComponents: true }],
 
         // Prevent missing props validation in a React component definition
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prop-types.md
@@ -182,31 +192,33 @@ module.exports = {
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/self-closing-comp.md
         'react/self-closing-comp': 'error',
 
-        // Enforce spaces before the closing bracket of self-closing JSX elements
-        // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-space-before-closing.md
-        'react/jsx-space-before-closing': ['error', 'always'],
-
         // Enforce component methods order
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/sort-comp.md
-        'react/sort-comp': ['error', {
-            order: [
-                'static-methods',
-                'lifecycle',
-                '/^on.+$/',
-                '/^(get|set)(?!(InitialState$|DefaultProps$|ChildContext$)).+$/',
-                'everything-else',
-                '/^render.+$/',
-                'render'
-            ],
-        }],
+        'react/sort-comp': [
+            'error',
+            {
+                order: [
+                    'static-methods',
+                    'lifecycle',
+                    '/^on.+$/',
+                    '/^(get|set)(?!(InitialState$|DefaultProps$|ChildContext$)).+$/',
+                    'everything-else',
+                    '/^render.+$/',
+                    'render'
+                ]
+            }
+        ],
 
         // Prevent missing parentheses around multilines JSX
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-wrap-multilines.md
-        'react/jsx-wrap-multilines': ['error', {
-            declaration: true,
-            assignment: true,
-            return: true
-        }],
+        'react/jsx-wrap-multilines': [
+            'error',
+            {
+                declaration: true,
+                assignment: true,
+                return: true
+            }
+        ],
         'react/wrap-multilines': 'off', // deprecated version
 
         // Require that the first prop in a JSX element be on a new line when the element is multiline
@@ -256,10 +268,13 @@ module.exports = {
 
         // Prevent unused propType definitions
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unused-prop-types.md
-        'react/no-unused-prop-types': ['error', {
-            customValidators: [],
-            skipShapeProps: true,
-        }],
+        'react/no-unused-prop-types': [
+            'error',
+            {
+                customValidators: [],
+                skipShapeProps: true
+            }
+        ],
 
         // Require style prop value be an object or var
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/style-prop-object.md
@@ -275,11 +290,14 @@ module.exports = {
 
         // Validate whitespace in and around the JSX opening and closing brackets
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-tag-spacing.md
-        'react/jsx-tag-spacing': ['error', {
-            closingSlash: 'never',
-            beforeSelfClosing: 'always',
-            afterOpening: 'never'
-        }],
+        'react/jsx-tag-spacing': [
+            'error',
+            {
+                closingSlash: 'never',
+                beforeSelfClosing: 'always',
+                afterOpening: 'never'
+            }
+        ],
 
         // Prevent usage of Array index in keys
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-array-index-key.md
@@ -287,12 +305,12 @@ module.exports = {
 
         // Enforce a defaultProps definition for every prop that is not a required prop
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-default-props.md
-        'react/require-default-props': 'off',
+        'react/require-default-props': 'off'
     },
 
     settings: {
         react: {
-            pragma: 'React',
-        },
+            pragma: 'React'
+        }
     }
 };
